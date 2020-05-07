@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 
 public class Q56_MergeIntervals {
-    private class IntervalComp implements Comparator<int[]> {
+    private static class IntervalComp implements Comparator<int[]> {
         @Override
         public int compare(int[] a,int[] b){
             if(a[0]<b[0]) return -1;
@@ -17,7 +17,7 @@ public class Q56_MergeIntervals {
 
 
     public int[][] merge(int[][] intervals) {
-        Collections.sort(Arrays.asList(intervals),new IntervalComp());
+        Collections.sort(Arrays.asList(intervals), new IntervalComp());
         int l=intervals.length;
         LinkedList<int[]> ans=new LinkedList();
 
